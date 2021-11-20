@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whatsapp-Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="wp image/whats.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="icon" href="icon.jpg" sizes="16x16" type="image/icon type"> -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css">
+</head>
+
+<body>
+    <!-- Loader Section -->
+    <div id="flex">
+        <div id="counter">
+            <img src="wp image/whats.png" alt="whatsapp">
+        </div>
+        <div>
+            <div id="small">from</div>
+            <div id="caps">FACEBOOK</div>
+        </div>
+    </div>
+
+    <ul>
+        <span>WhatsApp</span>
+        <li onclick="mySet()"><i class="fal fa-ellipsis-v"></i></li>
+        <li><i class="fal fa-search"></i></li>
+    </ul>
+
+    <div id="set">
+        <ol>
+            <li>New group</li>
+            <li>New broadcast</li>
+            <li>Linked devices</li>
+            <li>Starred messages</li>
+            <li>Payments</li>
+            <li>Settings</li>
+        </ol>
+    </div>
+
+    <nav>
+        <button class="tablink" onclick="openPage('camera')"> <i class="fas fa-camera"></i></button>
+        <button class="tablink" onclick="openPage('chat')" id="defaultOpen">CHATS</button>
+        <button class="tablink" onclick="openPage('status-div')">STATUS</button>
+        <button class="tablink" onclick="openPage('call')">CALLS</button>
+    </nav>
+
+    <!-- Camera Section -->
+    <div class="maindiv" id="camera">
+        <video id="video" width="360" height="260" autoplay></video>
+        <canvas id="canvas" width="360" height="260"></canvas>
+        <div class="btn">
+            <button id="snap"><i class="fas fa-camera"></i></button>
+        </div>
+    </div>
+
+    <!-- Chats Section -->
+    <div class="maindiv" id="chat">
+        <div class="container">
+            <div class="image">
+                <img src="wp image/shivam.jpg" class="profile" />
+            </div>
+            <div class="details">
+                <div class="profile-name">Shivam Sharma </div>
+                <div>Let's Create Something Awesome&#128293&#128293</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="image">
+                <img src="wp image/marvel.jpg" class="profile" />
+            </div>
+            <div class="details">
+                <div class="profile-name">Marvel India</div>
+                <div>Wait for 3 September.</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="image">
+                <img src="wp image/raashi.jpg" class="profile" />
+            </div>
+            <div class="details">
+                <div class="profile-name">Rashii Khanna</div>
+                <div>Typing....</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="image">
+                <img src="wp image/rdj.jpg" class="profile" />
+            </div>
+            <div class="details">
+                <div class="profile-name">Robert Downey Jr.</div>
+                <div>I am Iron Man..</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="image">
+                <img src="wp image/image1.jpg" class="profile" />
+            </div>
+            <div class="details">
+                <div class="profile-name">Rashmika</div>
+                <div><i class="fas fa-image-polaroid"></i> Photo</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="image">
+                <img src="wp image/netflix.jpg" class="profile" />
+            </div>
+            <div class="details">
+                <div class="profile-name">Netflix India</div>
+                <div>Get ready for Money Heist&#128176&#128176
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="image">
+                <img src="wp image/professor.jpg" class="profile" />
+            </div>
+            <div class="details">
+                <div class="profile-name">Alvaro Morte(professor)</div>
+                <div>Let's move to Plan B.</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="image">
+                <img src="wp image/klaus.jpg" class="profile" />
+            </div>
+            <div class="details">
+                <div class="profile-name">Joseph Morgan(Klaus)</div>
+                <div>No One can kill me&#129499&#129499.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Status Section -->
+    <div id="status-div" class="maindiv">
+        <div id="status-section">
+
+            <div class="status-container">
+                <div class="status-image">
+                    <img src="https://blob.sololearn.com/avatars/83d485ea-099e-4098-b3cf-50ed736d84a3.jpg" alt="">
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+                <div class="status-details">
+                    <div class="whos">My Status</div>
+                    <div>Tap to add status update</div>
+                </div>
+            </div>
+
+            <div class="recent">
+                Recent updates
+            </div>
+
+            <div class="status-container">
+                <div class="status-image">
+                    <img src="wp image/shivam.jpg" class="green-border" alt="">
+                </div>
+                <div class="status-details">
+                    <div class="whos">Shivam Sharma</div>
+                    <div class="whos-time">15 minutes ago</div>
+                </div>
+                <video src="videos/barnes.mp4" class="status-video"></video>
+            </div>
+            <div class="status-container">
+                <div class="status-image">
+                    <img src="wp image/raashi.jpg" class="green-border" alt="">
+                </div>
+                <div class="status-details">
+                    <div class="whos">Rashii Khanna</div>
+                    <div class="whos-time">Today, 9:00 am</div>
+                </div>
+                <video src="videos/rashi.mp4" class="status-video"></video>
+            </div>
+            <div class="status-container">
+                <div class="status-image">
+                    <img src="wp image/rdj.jpg" class="green-border" alt="">
+                </div>
+                <div class="status-details">
+                    <div class="whos">Robert Downey Jr.</div>
+                    <div class="whos-time">Today, 1:45 pm</div>
+                </div>
+                <video src="videos/iron man.mp4" class="status-video"></video>
+            </div>
+            <div class="status-container">
+                <div class="status-image">
+                    <img src="wp image/professor.jpg" class="green-border" alt="">
+                </div>
+                <div class="status-details">
+                    <div class="whos">Alvaro Morte(professor)</div>
+                    <div class="whos-time">Today, 7:45 am</div>
+                </div>
+                <video src="videos/prof.mp4" class="status-video"></video>
+            </div>
+
+            <div class="status-container">
+                <div class="status-image">
+                    <img src="wp image/image1.jpg" class="green-border" alt="">
+                </div>
+                <div class="status-details">
+                    <div class="whos">Rashmika</div>
+                    <div class="whos-time">Today, 9:00 pm</div>
+                </div>
+                <video src="videos/RM.mp4" class="status-video"></video>
+            </div>
+            <div class="status-container">
+                <div class="status-image">
+                    <img src="wp image/sal.jpg" class="green-border" alt="">
+                </div>
+                <div class="status-details">
+                    <div class="whos">Damon</div>
+                    <div class="whos-time">Today, 10:30 pm</div>
+                </div>
+                <video src="videos/damon.mp4" class="status-video"></video>
+            </div>
+            <div class="status-container">
+                <div class="status-image">
+                    <img src="wp image/chris.jpg" class="green-border" alt="">
+                </div>
+                <div class="status-details">
+                    <div class="whos">Chris Hemsworth</div>
+                    <div class="whos-time">Today, 8:00 am</div>
+                </div>
+                <video src="videos/thor.mp4" class="status-video"></video>
+            </div>
+
+            <div class="status-container" style="margin-bottom: 30%;">
+                <div class="status-image">
+                    <img src="wp image/klaus.jpg" class="green-border" alt="">
+                </div>
+                <div class="status-details">
+                    <div class="whos">Joseph Morgan(Klaus)</div>
+                    <div class="whos-time">Today, 11:00 pm</div>
+                </div>
+                <video src="videos/joseph.mp4" class="status-video"></video>
+            </div>
+
+            <div id="status">
+                <div class="status-icon">
+                    <i class="far fa-arrow-left" id="left"></i>
+                    <img id="status-image" src="wp image/shivam.jpg">
+                    <div id="status-text">
+                        <div id="status-name">shivam sharma</div>
+                        <div id="status-time">15 minutes ago</div>
+                    </div>
+                    <i class="fal fa-ellipsis-v" id="dots"></i>
+                </div>
+                <video src="videos/spidy.mp4" id="status-video"></video>
+            </div>
+
+        </div>
+
+        <div class="cam-icon">
+            <div class="pen"><i class="fas fa-pen"></i></div>
+            <div class="ion"><i class="fas fa-camera"></i></div>
+        </div>
+    </div>
+
+    <!-- Calls Section -->
+    <div id="call" class="maindiv">
+
+        <div class="call-content">
+            To start calling contacts who have WhatsApp, <br>
+            tap <i class="fas fa-phone-plus"></i> at he bottom of your screen.
+        </div>
+
+        <div class="pen"><i class="fas fa-video-plus"></i></div>
+        <div class="ion"><i class="fas fa-phone-plus"></i></div>
+    </div>
+
+    <!-- Profile Image Container Section -->
+    <div id="back-button"></div>
+    <div id="profile-container" onclick="myFunction()">
+        <div id="caption"></div>
+
+        <img src="" id="main-image">
+
+        <i class="fas fa-comment-alt-lines"></i>
+        <i class="fas fa-phone-alt"></i>
+        <i class="fas fa-video"></i>
+        <i class="fal fa-info-circle"></i>
+    </div>
+
+</body>
+<script src="main.js"></script>
+
+</html>
